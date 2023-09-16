@@ -3,8 +3,9 @@
   roles:
     - jenkins
   vars:
-    - { folder_name: "ci-pipelines"}
-    - {folder_name: "infra-jobs"}
+    folders:
+      - { folder_name: "ci-pipelines" }
+      - { folder_name: "infra-jobs" }
     mjobs:
       - { job_name: "cart", repo_name: "https://github.com/sravanreddy28/cart.git", folder_name: "ci-pipelines" }
 
