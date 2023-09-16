@@ -8,6 +8,11 @@
       - { folder_name: "infra-jobs" }
     mjobs:
       - { job_name: "cart", repo_name: "https://github.com/sravanreddy28/cart.git", folder_name: "ci-pipelines" }
+      - { job_name: "user", repo_name: "https://github.com/sravanreddy28/cart.git", folder_name: "ci-pipelines" }
+      - { job_name: "catalogue", repo_name: "https://github.com/sravanreddy28/cart.git", folder_name: "ci-pipelines" }
+      - { job_name: "shipping", repo_name: "https://github.com/sravanreddy28/cart.git", folder_name: "ci-pipelines" }
+      - { job_name: "frontend", repo_name: "https://github.com/sravanreddy28/cart.git", folder_name: "ci-pipelines" }
+      - { job_name: "payment", repo_name: "https://github.com/sravanreddy28/cart.git", folder_name: "ci-pipelines" }
 
     sjobs:
       - { job_name: "roboshop-terraform", repo_name: "https://github.com/sravanreddy28/roboshop-terraform.git", folder_name: "infra-jobs" }
