@@ -1,5 +1,5 @@
 - name: create folders
-  ansible.buitlin.include_tasks:
+  ansible.builtin.include_tasks:
     file:  folder.yml
   loop: "{{ folders }}"
 
