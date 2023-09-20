@@ -1,6 +1,6 @@
 def call() {
     node ('workstation') {
-        git branch: 'main', url: "https//github.com/sravanreddy28/${component}"
+        git branch: "${BRANCH_NAME}", url: "https//github.com/sravanreddy28/${component}"
         stage ('compile code') {
             common.compile()
         }
