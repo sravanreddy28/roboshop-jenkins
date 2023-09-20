@@ -36,10 +36,13 @@ def call() {
             }
 
             stage('Code Security') {
-//              when {
-//                    expression {BRANCH_NAME=="main"}
-//                    expression {BRANCH_NAME=="test1"}
-//                }
+              when {
+                  allof{
+                      expression {BRANCH_NAME=="main"}
+                      expression {BRANCH_NAME=="test1"}
+                  }
+
+                }
                 steps {
                     echo 'Hello World'
                     sh 'env'
