@@ -37,7 +37,7 @@ def call() {
 
             stage('Code Security') {
               when {
-                  allof{
+                  allof {
                       expression {BRANCH_NAME=="main"}
                       expression {BRANCH_NAME=="test1"}
                   }
