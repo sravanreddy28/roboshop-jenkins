@@ -36,12 +36,15 @@ def call() {
             }
 
             stage('Code Security') {
+                when {
+                    expression {BRANCH_NAME=="main"}
+                }
                 steps {
                     echo 'Hello World'
                 }
             }
 
-            stage('App Deployement') {
+            stage('release') {
                 steps {
                     echo 'Hello World'
                 }
