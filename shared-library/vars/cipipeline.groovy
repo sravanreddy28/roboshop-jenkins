@@ -14,11 +14,13 @@ def call() {
         stage ('compile code') {
             common.compile()
         }
-        stage ('test') {
-            print 'hello'
-        }
-        stage ('code quality') {
-            print 'hello'
+        if (env.TAG_NAME == null){
+            stage ('test') {
+                print 'hello'
+            }
+            stage ('code quality') {
+                print 'hello'
+            }
         }
         stage ('code security') {
             print 'hello'
