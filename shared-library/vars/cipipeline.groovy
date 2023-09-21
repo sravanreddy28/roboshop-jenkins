@@ -13,6 +13,7 @@ def call() {
         )
         stage ('compile code') {
             common.compile()
+            sh 'env'
         }
         if (env.TAG_NAME == null){
             stage ('test') {
