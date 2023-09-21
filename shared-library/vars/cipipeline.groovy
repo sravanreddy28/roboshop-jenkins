@@ -11,28 +11,19 @@ def call() {
                 branches: [[name: branch_name]],
                 userRemoteConfigs: [[url: "https://github.com/sravanreddy28/${component}"]]
         )
-        stage ('compile code') {
-            common.compile()
-            sh 'env'
-        }
-
-        if (env.TAG_NAME == null){
-            stage ('test') {
-                print 'hello'
-            }
-            stage ('code quality') {
-                print 'hello'
-            }
-        }
-
-        if (env.BRANCH_NAME == "main"){
-            stage ('code security') {
-                print 'hello'
-            }
-        }
         if (env.TAG_NAME ==~ ".*") {
-            stage('release') {
-                print 'hello'
+            common.compile()
+            common.release()
+        } else {
+            if (env.BRANCH_NAME == "main") {
+                common.compile()
+                common.test()
+                common.codequality()
+                common.codesecurity()
+            } else {
+                common.compile()
+                common.test()
+                common.codequality()
             }
         }
     }
