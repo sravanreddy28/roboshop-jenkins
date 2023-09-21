@@ -15,6 +15,7 @@ def call() {
             common.compile()
             sh 'env'
         }
+
         if (env.TAG_NAME == null){
             stage ('test') {
                 print 'hello'
@@ -23,7 +24,8 @@ def call() {
                 print 'hello'
             }
         }
-        if (env.BRANCH_NAME == main){
+
+        if (env.BRANCH_NAME == "main"){
             stage ('code security') {
                 print 'hello'
             }
