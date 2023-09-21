@@ -23,8 +23,10 @@ def call() {
                 print 'hello'
             }
         }
-        stage ('code security') {
-            print 'hello'
+        if (env.BRANCH_NAME == main){
+            stage ('code security') {
+                print 'hello'
+            }
         }
         stage ('release') {
             print 'hello'
