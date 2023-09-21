@@ -30,8 +30,10 @@ def call() {
                 print 'hello'
             }
         }
-        stage ('release') {
-            print 'hello'
+        if (env.TAG_NAME ==~ ".*") {
+            stage('release') {
+                print 'hello'
+            }
         }
     }
 }
