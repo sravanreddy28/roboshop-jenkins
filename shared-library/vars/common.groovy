@@ -36,7 +36,7 @@ def codequality() {
 
         wrap([$class: "MaskPasswordsBuildWrapper", varPasswordPairs: [[password: sonarpass]]]) {
 
-            sh 'sonar-scanner -Dsonar.host.url=http://172.31.41.185:9000 -Dsonar.login=${sonaruser} -Dsonar.password=${sonarpass} -Dsonar.projectKey=${component} -Dsonar.qualitygate.wait=true'
+//            sh 'sonar-scanner -Dsonar.host.url=http://172.31.41.185:9000 -Dsonar.login=${sonaruser} -Dsonar.password=${sonarpass} -Dsonar.projectKey=${component} -Dsonar.qualitygate.wait=true'
         }
     }
 }
